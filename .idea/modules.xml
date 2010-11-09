@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jeocoder.iml" filepath="$PROJECT_DIR$/jeocoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeocoder-core/jeocoder-core.iml" filepath="$PROJECT_DIR$/jeocoder-core/jeocoder-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeocoder-google/jeocoder-google.iml" filepath="$PROJECT_DIR$/jeocoder-google/jeocoder-google.iml" />
+    </modules>
+  </component>
+</project>
+
