@@ -10,8 +10,5 @@ import java.util.Set;
  */
 public interface Geocoder {
 	@NotNull
-	Set<GeocodedAddress> geocode( @NotNull String address ) throws GeocodingException;
-
-	@NotNull
 	Set<GeocodedAddress> geocode( @NotNull Address address ) throws GeocodingException;
 }

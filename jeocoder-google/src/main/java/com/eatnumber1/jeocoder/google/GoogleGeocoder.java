@@ -74,12 +74,6 @@ public class GoogleGeocoder implements Geocoder {
 
 	@NotNull
 	@Override
-	public Set<GeocodedAddress> geocode( @NotNull String address ) throws GeocodingException {
-		throw new UnsupportedOperationException();
-	}
-
-	@NotNull
-	@Override
 	public Set<GeocodedAddress> geocode( @NotNull Address address ) throws GeocodingException {
 		log.debug("Geocoding address " + address);
 		HttpMethod method = new GetMethod(resolveUri.getEscapedURI());

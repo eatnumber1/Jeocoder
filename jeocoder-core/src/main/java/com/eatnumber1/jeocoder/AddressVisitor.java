@@ -9,5 +9,5 @@ import org.jetbrains.annotations.NotNull;
 public interface AddressVisitor<T> {
 	T visitAddress( @NotNull Address address );
 
-	T visitUsAddress( @NotNull UsFormatAddress address );
+	T visitUsFormatAddress( @NotNull UsFormatAddress address );
 }

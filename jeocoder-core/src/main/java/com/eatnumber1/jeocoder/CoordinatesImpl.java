@@ -15,9 +15,6 @@ public class CoordinatesImpl implements Coordinates {
 	@NotNull
 	private Double longitude;
 
-	public CoordinatesImpl() {
-	}
-
 	public CoordinatesImpl( @NotNull Double latitude, @NotNull Double longitude ) {
 		this.latitude = latitude;
 		this.longitude = longitude;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">com.eatnumber1.jeocoder.hibernate.SQLiteDialect</property>
+		<property name="connection.driver_class">org.sqlite.JDBC</property>
+		<property name="connection.url">jdbc:sqlite:jeocoder-hibernate.sqlite</property>
+		<property name="connection.username"/>
+		<property name="connection.password"/>
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<mapping class="com.eatnumber1.jeocoder.hibernate.HibernateCoordinatesFactory"/>
+		<mapping class="com.eatnumber1.jeocoder.hibernate.HibernateAddressFactory"/>
+		<mapping class="com.eatnumber1.jeocoder.hibernate.HibernateUsFormatAddressFactory"/>
+		<mapping class="com.eatnumber1.jeocoder.hibernate.HibernateGeocodedAddressFactory"/>
+	</session-factory>
+</hibernate-configuration>

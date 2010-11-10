@@ -21,7 +21,7 @@
 		</filter>
 	</appender>
 
-	<logger name="com.eatnumber1.jeocoder.google">
+	<logger name="com.eatnumber1.jeocoder.hibernate">
 		<level value="trace"/>
 	</logger>
 

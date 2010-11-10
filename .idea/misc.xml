@@ -3,6 +3,20 @@
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
+  <component name="FacetAutodetectingManager">
+    <autodetection-disabled>
+      <facet-type id="hibernate">
+        <modules>
+          <module name="jeocoder-hibernate">
+            <files>
+              <file url="file://$PROJECT_DIR$/jeocoder-hibernate/src/main/java/hibernate.cfg.xml" />
+              <file url="file://$PROJECT_DIR$/jeocoder-hibernate/src/main/resources/hibernate.cfg.xml" />
+            </files>
+          </module>
+        </modules>
+      </facet-type>
+    </autodetection-disabled>
+  </component>
   <component name="IdProvider" IDEtalkID="798C817BF5AEC70C152B1759B97384DA" />
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />

@@ -13,11 +13,11 @@ import java.util.Set;
  * @since Nov 9, 2010
  */
 public class TestGoogleGeocoder {
-	private com.eatnumber1.jeocoder.google.GoogleGeocoder geocoder;
+	private GoogleGeocoder geocoder;
 
 	@Before
 	public void setUp() {
-		geocoder = new com.eatnumber1.jeocoder.google.GoogleGeocoder(false);
+		geocoder = new GoogleGeocoder(false);
 	}
 
 	@Test
@@ -31,7 +31,7 @@ public class TestGoogleGeocoder {
 		Assert.assertEquals("United States", geoAddress.getAddress().getCountry());
 		UsFormatAddress usAddress = geoAddress.getAddress().visit(new AbstractAddressVisitor<UsFormatAddress>() {
 			@Override
-			public UsFormatAddress visitUsAddress( @NotNull UsFormatAddress address ) {
+			public UsFormatAddress visitUsFormatAddress( @NotNull UsFormatAddress address ) {
 				return address;
 			}
 		});

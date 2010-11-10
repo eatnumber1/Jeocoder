@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class AbstractAddressVisitor<T> implements AddressVisitor<T> {
 	@Override
-	public T visitUsAddress( @NotNull UsFormatAddress address ) {
+	public T visitUsFormatAddress( @NotNull UsFormatAddress address ) {
 		return null;
 	}
 

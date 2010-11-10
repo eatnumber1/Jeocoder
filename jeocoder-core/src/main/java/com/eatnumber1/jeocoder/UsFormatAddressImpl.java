@@ -89,7 +89,7 @@ public class UsFormatAddressImpl extends AddressImpl implements UsFormatAddress 
 
 	@Override
 	public <T> T visit( @NotNull AddressVisitor<T> visitor ) {
-		return visitor.visitUsAddress(this);
+		return visitor.visitUsFormatAddress(this);
 	}
 
 	@Override
