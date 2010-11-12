@@ -1,6 +1,10 @@
-package com.eatnumber1.jeocoder;
+package com.eatnumber1.jeocoder.google;
 
-import com.eatnumber1.jeocoder.google.GoogleGeocoder;
+import com.eatnumber1.jeocoder.AbstractAddressVisitor;
+import com.eatnumber1.jeocoder.GeocodedAddress;
+import com.eatnumber1.jeocoder.GeocodingException;
+import com.eatnumber1.jeocoder.UsFormatAddress;
+import com.eatnumber1.jeocoder.UsFormatAddressImpl;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.junit.Before;

@@ -4,7 +4,6 @@ import com.eatnumber1.jeocoder.UsFormatAddress;
 import com.eatnumber1.jeocoder.UsFormatAddressImpl;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.hibernate.SessionFactory;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.junit.Test;
@@ -23,18 +22,14 @@ import static org.hamcrest.CoreMatchers.is;
  * @since Nov 10, 2010
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "/spring-config.xml")
+@ContextConfiguration(locations = "spring-config.xml")
 public class TestHibernateUsFormatAddressFactory {
 	@NotNull
 	private static Log log = LogFactory.getLog(TestHibernateUsFormatAddressFactory.class);
 
 	@NotNull
-	private HibernateTemplate hibernateTemplate;
-
 	@Autowired
-	public void setSessionFactory( @NotNull SessionFactory sessionFactory ) {
-		hibernateTemplate = new HibernateTemplate(sessionFactory);
-	}
+	private HibernateTemplate hibernateTemplate;
 
 	@Test
 	public void saveAndLoad() {

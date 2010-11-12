@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	<bean name="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation" value="com/eatnumber1/jeocoder/hibernate.cfg.xml"/>
+		<property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration"/>
+	</bean>
+
+	<bean name="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<constructor-arg ref="sessionFactory"/>
+	</bean>
+
+	<bean name="googleGeocoder" class="com.eatnumber1.jeocoder.google.GoogleGeocoder">
+		<constructor-arg value="false"/>
+	</bean>
+
+	<bean name="aggregateGeocoder" class="com.eatnumber1.jeocoder.AggregateGeocoder">
+		<constructor-arg>
+			<list>
+				<ref bean="googleGeocoder"/>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean name="hibernateGeocoder" class="com.eatnumber1.jeocoder.hibernate.HibernateGeocoder">
+		<constructor-arg ref="hibernateTemplate"/>
+		<constructor-arg ref="aggregateGeocoder"/>
+	</bean>
+</beans>

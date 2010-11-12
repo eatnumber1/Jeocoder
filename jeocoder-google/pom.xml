@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>${pom.groupId}</groupId>
 			<artifactId>jeocoder-core</artifactId>
-			<version>1.0</version>
+			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-httpclient</groupId>

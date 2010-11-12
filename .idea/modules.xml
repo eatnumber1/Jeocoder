@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/jeocoder-core/jeocoder-core.iml" filepath="$PROJECT_DIR$/jeocoder-core/jeocoder-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/jeocoder-google/jeocoder-google.iml" filepath="$PROJECT_DIR$/jeocoder-google/jeocoder-google.iml" />
       <module fileurl="file://$PROJECT_DIR$/jeocoder-hibernate/jeocoder-hibernate.iml" filepath="$PROJECT_DIR$/jeocoder-hibernate/jeocoder-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeocoder-test/jeocoder-test.iml" filepath="$PROJECT_DIR$/jeocoder-test/jeocoder-test.iml" />
     </modules>
   </component>
 </project>

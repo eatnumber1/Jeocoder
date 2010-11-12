@@ -8,7 +8,6 @@ import com.eatnumber1.jeocoder.GeocodingException;
 import com.eatnumber1.jeocoder.UsFormatAddressImpl;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.hibernate.SessionFactory;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,22 +26,18 @@ import static org.hamcrest.CoreMatchers.is;
  * @since Nov 12, 2010
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "/spring-config.xml")
+@ContextConfiguration(locations = "spring-config.xml")
 public class TestHibernateGeocoder {
 	@NotNull
 	private static Log log = LogFactory.getLog(TestHibernateGeocoder.class);
 
 	@NotNull
+	@Autowired
 	private HibernateTemplate hibernateTemplate;
 
 	@NotNull
-	private HibernateGeocoder geocoder;
-
 	@Autowired
-	public void setSessionFactory( @NotNull SessionFactory sessionFactory ) {
-		hibernateTemplate = new HibernateTemplate(sessionFactory);
-		geocoder = new HibernateGeocoder(sessionFactory);
-	}
+	private HibernateGeocoder geocoder;
 
 	@Test
 	public void lookup() throws GeocodingException {

@@ -9,6 +9,7 @@
 		<module>jeocoder-google</module>
 		<module>jeocoder-core</module>
 		<module>jeocoder-hibernate</module>
+		<module>jeocoder-test</module>
 	</modules>
 	<packaging>pom</packaging>
 

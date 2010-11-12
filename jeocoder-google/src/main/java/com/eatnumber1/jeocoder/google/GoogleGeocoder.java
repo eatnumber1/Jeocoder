@@ -22,6 +22,7 @@ import org.apache.commons.httpclient.URI;
 import org.apache.commons.httpclient.URIException;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jetbrains.annotations.NotNull;
@@ -70,6 +71,13 @@ public class GoogleGeocoder implements Geocoder {
 
 	public void setSensor( @NotNull Boolean sensor ) {
 		this.sensor = sensor;
+	}
+
+	@Override
+	public String toString() {
+		return new ToStringBuilder(this, ToStringUtils.STYLE).
+				append("sensor", sensor).
+				toString();
 	}
 
 	@NotNull
@@ -136,7 +144,5 @@ public class GoogleGeocoder implements Geocoder {
 				return LocationType.valueOf(json.getAsString());
 			}
 		}
-
 	}
-
 }

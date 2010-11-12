@@ -1,5 +1,7 @@
 package com.eatnumber1.jeocoder;
 
+import com.eatnumber1.ToStringUtils;
+import org.apache.commons.lang.builder.ToStringBuilder;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -45,5 +47,12 @@ public class AggregateGeocoder implements Geocoder {
 		}
 		assert (ex != null);
 		throw ex;
+	}
+
+	@Override
+	public String toString() {
+		return new ToStringBuilder(this, ToStringUtils.STYLE).
+				append("delegates", delegates).
+				toString();
 	}
 }

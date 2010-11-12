@@ -9,7 +9,7 @@
 		<property name="connection.url">jdbc:sqlite:jeocoder-hibernate.sqlite</property>
 		<property name="connection.username"/>
 		<property name="connection.password"/>
-		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.hbm2ddl.auto">create-drop</property>
 		<mapping class="com.eatnumber1.jeocoder.hibernate.HibernateCoordinatesFactory"/>
 		<mapping class="com.eatnumber1.jeocoder.hibernate.HibernateAddressFactory"/>
 		<mapping class="com.eatnumber1.jeocoder.hibernate.HibernateUsFormatAddressFactory"/>
